@@ -1,0 +1,191 @@
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #E0E0FF; 
+    background-color: #0D0F21;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: #1a1e4a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+}
+
+header h1 {
+    font-family: 'Bungee', cursive; 
+    color: #FFC300; 
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #E0E0FF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #1a1e4a;
+    background-color: #FFC300;
+}
+
+/* --- Seção Principal (Hero) --- */
+.hero-section {
+    background: linear-gradient(180deg, #0D0F21 0%, #301934 100%); 
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section h2 {
+    font-family: 'Bungee', cursive;
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #9D72FF; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botão de Jogar */
+.btn-jogar {
+    display: inline-block;
+    background-color: #4CAF50; 
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-family: 'Bungee', cursive;
+    font-size: 1.2em;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 5px 0 #388E3C;
+    border: none;
+}
+
+.btn-jogar:hover {
+    background-color: #388E3C;
+    transform: translateY(2px); 
+    box-shadow: 0 3px 0 #2E7D32;
+}
+
+.btn-jogar.large {
+    padding: 20px 40px;
+    font-size: 1.5em;
+}
+
+
+.info-section {
+    padding: 40px 20px;
+    background-color: #1a1e4a; 
+    border-bottom: 1px solid #301934;
+}
+
+.info-section:nth-child(even) { 
+    background-color: #101438;
+}
+
+.info-section h3 {
+    font-family: 'Bungee', cursive;
+    color: #FFC300;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.destaque {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid #9D72FF;
+    border-radius: 5px;
+}
+
+blockquote {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+
+/* --- Seção CTA (Call to Action) --- */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #301934; 
+}
+
+.cta-section h3 {
+    color: #FFC300;
+    font-family: 'Bungee', cursive;
+    margin-bottom: 30px;
+}
+
+.aviso {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #a0a0ff;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: #050614; 
+    color: #a0a0ff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li a {
+        text-align: center;
+        padding: 5px 15px;
+    }
+    .hero-section h2 {
+        font-size: 2em;
+    }
+    .cards-personagens {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+    }
+}
