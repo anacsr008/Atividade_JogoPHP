@@ -1,56 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+\<!DOCTYPE html>
+<html lang="PT">
 <head>
     <meta charset="UTF-8">
-    <title> Órion o Jogo - RPG </title>
-    <link rel="stylesheet" href="{asset{('css/tela-inicial.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> A lenda de Orion </title>
+    <link rel="stylesheet" href="/css/tela-inicial.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1> Órion e a Aventura Estelar </h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#jogar">Jogar</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+    <div class="menu-container">
+        <h1 class="game-title">A Lenda de Orion</h1>
+        
+        <p class="tagline">O destino do reino está em suas mãos.</p>
+
+        <div class="menu-buttons">
+            <button class="menu-btn start-btn">Iniciar Jogo</button>
+            <button class="menu-btn">Configurações</button>
+            <button class="menu-btn">Saiba Mais</button>
+            <button class="menu-btn exit-btn">Sair</button>
         </div>
-    </header>
-
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h2>Encare seus medos. Explore o cosmos!</h2>
-                <p>Junte-se a Órion em uma jornada mágica para salvar a noite.</p>
-                <a href="#jogar" class="btn-jogar">INICIAR AVENTURA</a>
-            </div>
-        </section>
-
-        <section id="sobre" class="info-section">
-            <div class="container">
-                <h3> Sobre o Jogo</h3>
-                <p>Neste jogo de plataforma e aventura, você ajudará Órion a superar sua ansiedade e o medo. A cada fase, novos desafios noturnos, estrelas para coletar e os divertidos Entes da Noite para interagir.</p>
-                <div class="destaque">
-                    <blockquote></blockquote>
-                </div>
-            </div>
-        </section>
-
-        <section id="jogar" class="cta-section">
-            <div class="container">
-                <h3>🎮 Pronto para a Aventura?</h3>
-                <a href="#" class="btn-jogar large">CLIQUE PARA JOGAR AGORA!</a>
-                <p class="aviso">Requer navegador compatível com HTML5. Versão Beta 1.0.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Jogo Órion e o Escuro. Inspirado na animação DreamWorks/Netflix.</p>
-        </div>
-    </footer>
+        
+        <p class="version-info">Versão 1.0.0 - Original Ana</p>
+    </div>
 </body>
 </html>
