@@ -1,120 +1,215 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
 :root {
-    /* Definição de Cores */
-    --cor-fundo: #6d94ef;        
-    --cor-primaria: #0004fd;   
-    --cor-secundaria: #ffffff;   
-    --cor-destaque: #6dc5f5;    
+    --color-light-blue: #c4e1f7; 
+    --color-medium-blue: #93c0ea; 
+    --color-title: #2d5a9b; 
+    --color-button-text: #2d5a9b; 
+    --color-text-shadow: #ffffff; 
+    --color-button-bg: #89bbed; 
+    --color-button-hover: #6ea7e1; 
+    --color-copyright: #faf6f6; 
+    --color-starfish: #ADD8E6; 
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-secundaria);
-    font-family: 'Cinzel', serif; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    min-height: 100vh;
+    background-color: var(--color-medium-blue); 
+    overflow: hidden; 
 }
 
-
-.menu-container {
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5); 
-    box-shadow: 0 0 30px rgba(160, 132, 90, 0.4);
-    max-width: 90%;
-}
-
-/* Título do Jogo */
-.game-title {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: var(--cor-destaque);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    letter-spacing: 2px;
-}
-
-/* Subtítulo */
-.tagline {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    opacity: 0.8;
-}
-
-/* Container dos Botões */
-.menu-buttons {
+.container {
+    width: 100%;
+    max-width: 4000px; 
+    height: 100vh; 
+    background: linear-gradient(to bottom, 
+        var(--color-light-blue) 0%, 
+        var(--color-light-blue) 65%, 
+        var(--color-medium-blue) 100%
+    );
+    position: relative;
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
-    gap: 15px; 
-    width: 300px;
-    margin: 0 auto 30px auto;
+    align-items: center;
+    justify-content: center; 
 }
 
-.menu-btn {
-    padding: 15px 30px;
-    font-size: 1.1em;
-    font-weight: 700;
-    cursor: pointer;
-    border: 2px solid var(--cor-primaria);
-    background-color: transparent;
-    color: var(--cor-primaria);
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    border-radius: 5px;
+/*  Título (SubMissão) */
+.title {
+    font-size: 7em; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color-title);
+    margin-top: -8vh; 
+    margin-bottom: 7vh; 
+    font-weight: bold;
+    text-shadow: 
+        -3px -3px 0 var(--color-text-shadow),  
+        3px -3px 0 var(--color-text-shadow),
+        -3px 3px 0 var(--color-text-shadow),
+        3px 3px 0 var(--color-text-shadow);
     letter-spacing: 1px;
+    z-index: 10;
+}
+
+/*  Menu e Botões  */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; 
+    z-index: 10;
+}
+
+.menu-button {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    font-size: 1.8em; 
+    font-weight: bold;
+    padding: 20px 80px; 
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    text-align: center;
+    width: 400px; 
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.copyright {
+    position: absolute;
+    bottom: 30px; 
+    font-size: 1.1em; 
+    color: var(--color-copyright);
+    z-index: 10;
+}
+
+.graphic {
+    position: absolute;
+    z-index: 5; 
+    pointer-events: none; 
+}
+.flor01{
+    width: 300px;
+    top:-3vw;
+    left:-6vw;
+}
+
+.flor02 {
+    width: 250px; 
+    top: 30vh;
+    right: -6vw;
+}
+/* Arraia */
+.arraia {
+    width: 430px; 
+    top: 25vh;
+    left: 5vw;
+    
+}
+
+/* Água-viva */
+.agua-viva {
+    width: 225px; 
+    top: -2vh;
+    right: 19vw;
+}
+
+/* Corais */
+.corais {
+    width: 280px; 
+    bottom: 0;
+    left: -2vw;
+}
+
+/* Peixes */
+.peixes {
+    width: 425px; 
+    bottom: -3vh;
+    margin-top: 50;
+    right: 0vw;
 }
 
 
-.menu-btn:hover {
-    background-color: var(--cor-primaria);
-    color: var(--cor-fundo); 
-    box-shadow: 0 0 15px var(--cor-destaque);
-    transform: translateY(-2px); 
-}
-
-.start-btn {
-    border-color: var(--cor-destaque);
-    color: var(--cor-destaque);
-    background-color: rgba(160, 132, 90, 0.1);
-}
-
-.start-btn:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-fundo);
-}
-
-
-.exit-btn {
-    border-color: #bc0000;
-}
-
-.exit-btn:hover {
-    background-color: #d75757;
-    color: var(--cor-secundaria);
-}
-
-.version-info {
-    font-size: 0.8em;
+.starfish {
+    position: absolute;
+    background-color: var(--color-starfish);
     opacity: 0.6;
-    margin-top: 30px;
+    filter: blur(2px); 
+    z-index: 1; 
+    pointer-events: none;
 }
 
-@media (max-width: 600px) {
-    .game-title {
-        font-size: 2.5em;
-    }
+.starfish.top-left {
+    width: 200px; 
+    height: 200px;
+    top: -80px;
+    left: -80px;
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%; 
+    transform: rotate(20deg);
+}
 
-    .menu-buttons {
-        width: 250px;
-    }
+.starfish.top-left::before,
+.starfish.top-left::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-starfish);
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(1px);
+}
 
-    .menu-btn {
-        padding: 12px 20px;
-    }
+.starfish.top-left::before {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 150px;
+    border-radius: 30% 70% 20% 80% / 70% 30% 70% 30%;
+    transform: rotate(-10deg);
+}
+
+
+.starfish.top-right {
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: 20px;
+    background-color: var(--color-starfish); 
+    opacity: 0.4;
+    z-index: 0; 
+    transform: rotate(-45deg);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; 
+}
+
+.starfish.bottom-right {
+    width: 180px;
+    height: 180px;
+    bottom: -50px;
+    right: -50px;
+    background-color: var(--color-starfish); 
+    opacity: 0.5;
+    z-index: 0; 
+    transform: rotate(10deg);
+    border-radius: 40% 60% 50% 50% / 60% 40% 50% 50%; 
+}
+
+.starfish.bottom-left {
+    width: 120px;
+    height: 120px;
+    bottom: 50px;
+    left: 200px;
+    background-color: var(--color-starfish); 
+    opacity: 0.7;
+    z-index: 4; 
+    transform: rotate(90deg);
+    border-radius: 50% 50% 70% 30% / 30% 70% 50% 50%; 
 }

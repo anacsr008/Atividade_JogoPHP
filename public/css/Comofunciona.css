@@ -1,0 +1,104 @@
+:root {
+    --color-light-blue: #c4e1f7; 
+    --color-medium-blue: #93c0ea; 
+    --color-title: #00419a; 
+    --color-button-text: #2d5a9b; 
+    --color-button-bg: #89bbed; 
+    --color-button-hover: #6ea7e1; 
+    --color-copyright: #faf6f6; 
+    --color-starfish: #ADD8E6; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-medium-blue); 
+    overflow: hidden; 
+}
+
+.container {
+    width: 100%;
+    max-width: 6000px; 
+    height: 100vh; 
+    background: linear-gradient(to bottom, 
+        var(--color-light-blue) 0%, 
+        var(--color-light-blue) 65%, 
+        var(--color-medium-blue) 100%
+    );
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 0 40px;
+    text-align: center;
+}
+
+/* Título */
+.title {
+    font-size: 7em; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-title); 
+    margin-top: -8vh; 
+    margin-bottom: 7vh; 
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 10;
+    text-shadow: 2px 2px 6px rgba(0,0,128,0.4);
+}
+
+/* Texto */
+.container p {
+    font-size: 1.3em;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-bottom: 20px;
+    color: #002b5c;
+    font-weight: 500;
+}
+
+/* Link voltar */
+.copyright {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    color: var(--color-copyright);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.starfish {
+    position: absolute;
+    background-color: var(--color-starfish);
+    opacity: 0.6;
+    filter: blur(2px); 
+    z-index: 1; 
+    pointer-events: none;
+}
+
+.starfish.top-left {
+    width: 200px; 
+    height: 200px;
+    top: -80px;
+    left: -80px;
+    border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%; 
+    transform: rotate(20deg);
+}
+
+.starfish.top-right-corner {
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: 20px;
+    opacity: 0.4;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+}
